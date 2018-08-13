@@ -1,0 +1,20 @@
+#!/usr/bin/python
+
+import os
+
+# read a file
+xmen_file = open('xmen.txt')
+
+#for line in xmen_file:
+#    print(line)
+
+print(xmen_file.read())
+
+# write a file
+xmen_file = open('xmen.txt', 'r+') # read and write
+
+xmen_file.seek(-1, os.SEEK_END)
+xmen_file.write("\nBeast\n")
+xmen_file.write("Chicken Supper\n")
+
+xmen_file.close()

@@ -1,0 +1,366 @@
+# python commands
+
+# Lists and Tuples
+-------------------
+list = ['spam', 'wham', 'van', 'can', 'stan']
+
+# slice
+list[0:2]
+['spam', 'wham']
+
+# last element
+list[-1]
+'stan'
+
+# give me every second element - start->: finish->: step->2
+list[::2]
+['spam', 'van', 'stan']
+
+# start on the second element(remember zero indexed)
+list[2::2]
+['van', 'stan']
+
+# change index value
+list[0] = 'cake'
+['cake', 'wham', 'van', 'can', 'stan']
+
+# append method
+list.append('beer')
+['cake', 'wham', 'van', 'can', 'stan', 'beer']
+
+# add to list
+list += ['spice', 'salt']
+['cake', 'wham', 'van', 'can', 'stan', 'beer', 'spice', 'salt']
+
+# find and replace elements in list
+list[3:5]
+['van', 'can']
+list[3:5] = ['ice', 'sugar']
+list
+['cake', 'tea', 'coffee', 'ice', 'sugar', 'stan', 'beer', 'spice', 'salt']
+
+# remove elementdel list[5]
+del list[5]
+list
+['cake', 'tea', 'coffee', 'ice', 'sugar', 'beer', 'spice', 'salt']
+
+list.pop(5)
+'stan'
+list
+['cake', 'tea', 'coffee', 'ice', 'sugar', 'beer', 'spice', 'salt']
+
+# insert at index
+list.insert(5, 'stan')
+list
+['cake', 'tea', 'coffee', 'ice', 'sugar', 'stan', 'beer', 'spice', 'salt']
+
+# Tuples have fixed length
+ "My name is %s %s" % ("Sean", "McGuigan")#<--Tuple of fixed length
+'My name is Sean McGuigan'
+
+# dictionaries
+-------------
+ages = {'Sean': 47, 'Martin': 43 , 'Vincent': 37}
+ages['Sean']
+47
+
+# add to dictionary
+ages['David'] = 43
+ages
+{'Vincent': 37, 'David': 43, 'Sean': 47, 'Martin': 43}
+
+# delete from dictionary
+del ages['Sean']
+ages
+{'Vincent': 37, 'David': 43, 'Martin': 43}
+
+ages.pop('Vincent')
+37
+ages
+{'David': 43, 'Martin': 43}
+
+# values method
+ages.values()
+[37, 43, 47, 43]
+
+# keys method
+ages.keys()
+['Vincent', 'Martin', 'Sean', 'David']
+
+# list of tuples from dictionary with key and value as the items
+ages.items()
+[('Vincent', 37), ('Martin', 43), ('Sean', 47), ('David', 43)]
+
+# conditionals
+--------------
+1 < 2
+True
+1 > 2
+False
+
+"this" == "this"
+True
+"this" == "that"
+False
+
+2 in [1, 2, 3]
+True
+
+4 in [1, 2, 3]
+False
+
+>>> if True:
+...     print("something is true")
+... 
+something is true
+
+# if it's false it does not fall into the block, so does nothing.
+>>> if False:
+...     print("something is true")
+... 
+>>>
+
+>>> name = "Sean"
+>>> if len(name) <= 4:
+...     print("the name is short")
+... else:
+...     print("the name is long")
+... 
+the name is short
+
+# elif - like bash
+>>> name = "Martin"
+>>> if len(name) >= 8:
+...     print("thats a long name")
+... elif len(name) == 6:
+...     print("thats an average name")
+... else:
+...     print("thats a short name")
+... 
+thats an average name
+
+# loops iteration
+----------------
+# while loop
+>>> count = 0
+>>> while count < 10:
+...     print("counting %s" % count)
+...     count += 1
+... 
+counting 0
+counting 1
+counting 2
+counting 3
+counting 4
+counting 5
+counting 6
+counting 7
+counting 8
+counting 9
+
+>>> count = 0
+>>> while count < 10:
+...     if count % 2 == 0: # if count divided by 2 what is the remainder?
+                           # 9 divided by 2 is equal to 4.
+                           # 4 times 2 is 8
+                           # 9 minus 8 is 1 - the remainder, and so odd
+...         count += 1
+...         continue
+...     print("we're counting odd numbers %s" % count)
+...     count += 1
+... 
+
+
+we're counting odd numbers 1                                                                                                                                                                                                                                                                  																																			             																																																					
+we're counting odd numbers 3                                                                                                                       																																																																																																																																																																																			                                       	
+we're counting odd numbers 5                                                                                                                   																
+we're counting odd numbers 7                                                                          																												
+we're counting odd numbers 9                                                                          																											
+
+# for loop
+>>> colors = ["red", "green", "blue"]
+>>> for i in colors:
+...     print(i)
+... 
+red
+green
+blue
+
+# for loop over dictionary
+>>> ages = {'Bob': 45, 'Dave': 56}
+>>> for x, y in ages.items():
+...     print(x)
+...     print(y)
+... 
+Bob
+45
+Dave
+56
+
+ages.items() # gives us a list of tuples
+[('Bob', 45), ('Dave', 56)]
+
+# execute if something is NOT true
+>>> if not len("short") > 10:
+...     print("It's not longer than 10 charachters")
+... 
+It's not longer than 10 characters
+
+###
+
+user = {'admin': 'False', 'active': 'True', 'name': 'Sean'}
+    username = user.values('name')
+    if user.values('active') == 'True'
+    print("ACTIVE %s" % username)
+
+# lambda
+>>> sum = lambda arg1, arg2: arg1 + arg2;
+>>> print "Value of total : ", sum( 10, 20 )
+Value of total :  30
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

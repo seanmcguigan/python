@@ -1,0 +1,11 @@
+#!/usr/bin/env python
+
+# looking for a string
+name = raw_input("What is your name? ")
+birthday = raw_input("What is your birthday? ")
+
+# looking for whatever is returned int, float, string....
+age = input("Wie alt sind Sie? ")
+
+print ("%s was born on %s" % (name, birthday))
+print ("Half of your age is %s" % (age / 2 ))
