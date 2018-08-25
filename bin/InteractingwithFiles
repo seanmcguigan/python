@@ -13,8 +13,8 @@ print(xmen_file.read())
 # write a file
 xmen_file = open('xmen.txt', 'r+') # read and write
 
-xmen_file.seek(-1, os.SEEK_END)
-xmen_file.write("\nBeast\n")
+xmen_file.seek(-1, os.SEEK_END)# go to the end of the file
+xmen_file.write("\nGonks\n")
 xmen_file.write("Chicken Supper\n")
 
 xmen_file.close()
